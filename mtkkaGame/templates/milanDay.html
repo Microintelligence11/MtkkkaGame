@@ -1,0 +1,362 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/stlye.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital@1&display=swap" rel="stylesheet">
+
+    <title>Kalyan day jodi chart</title>
+
+    <style>
+        .namehref {
+            text-decoration: none ! important;
+        }
+
+        .firstdivpara {
+            width: 100%;
+            background-color: #28a745 !important;
+            padding: 18px;
+            color: white;
+            border: 1px solid #dee2e6 !important;
+            font-size: 16px;
+        }
+
+        .button2 {
+            background-color: rgb(240, 60, 60);
+            color: white;
+            font-weight: bold;
+            width: 150px;
+            height: 55px;
+            border-radius: 5px;
+            margin-top: 2%;
+            margin-left: 35px;
+            text-align: center;
+
+        }
+
+        .mainbharath {
+            background-color: #ffc107 !important;
+            width: 100%;
+            height: 15%;
+            text-align: center;
+            color: #000;
+            font-weight: bold;
+            padding: 14px;
+            margin-top: 1%;
+
+        }
+
+        .table td,
+        .table th {
+            padding: 0.25rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .table-bordered td,
+        .table-bordered th {
+            border: 1px solid black;
+        }
+
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px black;
+        }
+
+        .pass {
+            width: 100%;
+            height: 12vh;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            background-color: rgb(31, 79, 99);
+            color: rgb(204, 255, 0);
+            padding: 25px;
+            font-style: italic;
+        }
+
+        .test {
+            text-align: center;
+            margin-top: 3%;
+            margin-bottom: 1%;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: brown;
+            background-color: whitesmoke;
+        }
+
+        .empty {
+            width: 100%;
+            height: 10vh;
+            background-color: #3b5057;
+            border-top: 5px solid rgb(0, 0, 0);
+            margin-bottom: 2%;
+        }
+
+        .saatasite {
+            width: 100%;
+            height: 12vh;
+            background-color: black;
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 8px;
+            margin-bottom: 7px;
+        }
+
+        .refrash {
+            background: linear-gradient(to right, #02dc61, #3c67b8) !important;
+            color: white;
+            border: solid 1px #000;
+            font-size: 1.4em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none ! important;
+            font-weight: bold;
+        }
+
+        .rehref {
+            color: white !important;
+            font-weight: bold;
+            text-decoration: none !important;
+            background-color: unset !important;
+        }
+
+        .footer {
+            width: 100%;
+            height: 28vh;
+            background-color: #8ff3ce;
+
+        }
+
+        .button {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            width: 85px;
+            height: 55px;
+            border-radius: 5px;
+            margin-top: 2%;
+            margin-left: 35px;
+
+        }
+
+        .blackbold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <a href="/" class="namehref">
+            <h1 class="textColor my-3">SattaMatkaa.Site</h1>
+        </a>
+    </center>
+
+    <div class="container-flude firstdivpara">
+        <center>
+            <p>Milan Day Chart, Milan Day Chart 2018, Milan Day Chart Open, Milan DayChart Night, Milan Day Chart
+                Result, Milan Day Chart Video, Milan Day Chart Matka Satta, Milan Day Chart Today, Milan Day Chart
+                Matkaguru In</p>
+        </center>
+    </div>
+
+    <div class="live my-2">
+
+        <h4 class="livegame"><span class="cercal spinner-grow">*</span> LIVE - RESULT - ZONE <span
+                class="cercal spinner-grow">*</span></h4>
+
+        <div class="firstName">
+            <h4>Jay bharat</h4>
+            <h5>{{all_objects.0.Jay_bharat}}</h5>
+        </div>
+        <hr class="gamehr">
+        <div class="firstName">
+            <h4>Moon night</h4>
+            <h5>{{all_objects.0.Moon_night}}</h5>
+        </div>
+
+        <hr class="gamehr">
+        <div class="firstName">
+            <h4>Great India</h4>
+            <h5>{{all_objects.0.Great_India}}</h5>
+        </div>
+        <hr class="gamehr">
+        <div class="firstName">
+            <h4>Kalyan day</h4>
+            <h5>{{all_objects.0.Kalyan_day}}</h5>
+        </div>
+    </div>
+
+
+    <div class="text-center">
+        <a href="#bottombutton"> <button type="button" class="btn btn-danger button2">Go To Down</button></a>
+    </div>
+    <div class="container">
+        <div class="mainbharath">
+            <h3>
+                Kalyan Day Jodi Chart
+            </h3>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col" style="padding-left: 3%;">Date</th>
+                    <th scope="col" style="padding-left: 3%;">Mon</th>
+                    <th scope="col" style="padding-left: 3%;">Tue</th>
+                    <th scope="col" style="padding-left: 3%;">Wed</th>
+                    <th scope="col" style="padding-left: 3%;">Thu</th>
+                    <th scope="col" style="padding-left: 3%;">Fri</th>
+                    <th scope="col" style="padding-left: 3%;">Sat</th>
+                    <th scope="col" style="padding-left: 3%;">Sun</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <th scope="row" style="padding-left: 3%; padding-right: 0%;">{{milaDay_objects.0.Date}}</th>
+                <th scope="row" style="padding-left: 4.5%; padding-right: 0%;">{{milaDay_objects.0.Mon}}</th>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.0.Tue}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.0.Wed}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.0.Thu}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.0.Fri}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.0.Sat}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.0.Sun}}</td>
+            </tr>
+                <tr>
+                <th scope="row" style="padding-left: 3%; padding-right: 0%;">{{milaDay_objects.1.Date}}</th>
+                <th scope="row" style="padding-left: 4.5%; padding-right: 0%;">{{milaDay_objects.1.Mon}}</th>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.1.Tue}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.1.Wed}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.1.Thu}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.1.Fri}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.1.Sat}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.1.Sun}}</td>
+            </tr>
+                </tr>
+                <tr>
+                <th scope="row" style="padding-left: 3%; padding-right: 0%;">{{milaDay_objects.2.Date}}</th>
+                <th scope="row" style="padding-left: 4.5%; padding-right: 0%;">{{milaDay_objects.2.Mon}}</th>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.2.Tue}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.2.Wed}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.2.Thu}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.2.Fri}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.2.Sat}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.2.Sun}}</td>
+            </tr>
+                <tr>
+                <th scope="row" style="padding-left: 3%; padding-right: 0%;">{{milaDay_objects.3.Date}}</th>
+                <th scope="row" style="padding-left: 4.5%; padding-right: 0%;">{{milaDay_objects.3.Mon}}</th>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.3.Tue}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.3.Wed}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.3.Thu}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.3.Fri}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.3.Sat}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.3.Sun}}</td>
+            </tr>
+                <tr>
+                <th scope="row" style="padding-left: 3%; padding-right: 0%;">{{milaDay_objects.4.Date}}</th>
+                <th scope="row" style="padding-left: 4.5%; padding-right: 0%;">{{milaDay_objects.4.Mon}}</th>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.4.Tue}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.4.Wed}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.4.Thu}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.4.Fri}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.4.Sat}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.4.Sun}}</td>
+            </tr>
+                <tr>
+                <th scope="row" style="padding-left: 3%; padding-right: 0%;">{{milaDay_objects.5.Date}}</th>
+                <th scope="row" style="padding-left: 4.5%; padding-right: 0%;">{{milaDay_objects.5.Mon}}</th>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.5.Tue}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.5.Wed}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.5.Thu}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.5.Fri}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.5.Sat}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.5.Sun}}</td>
+            </tr>
+                <tr>
+                <th scope="row" style="padding-left: 3%; padding-right: 0%;">{{milaDay_objects.6.Date}}</th>
+                <th scope="row" style="padding-left: 4.5%; padding-right: 0%;">{{milaDay_objects.6.Mon}}</th>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.6.Tue}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.6.Wed}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.6.Thu}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.6.Fri}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.6.Sat}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.6.Sun}}</td>
+            </tr>
+                <tr>
+                <th scope="row" style="padding-left: 3%; padding-right: 0%;">{{milaDay_objects.7.Date}}</th>
+                <th scope="row" style="padding-left: 4.5%; padding-right: 0%;">{{milaDay_objects.7.Mon}}</th>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.7.Tue}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.7.Wed}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.7.Thu}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.7.Fri}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.7.Sat}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.7.Sun}}</td>
+            </tr>
+                <tr>
+                <th scope="row" style="padding-left: 3%; padding-right: 0%;">{{milaDay_objects.8.Date}}</th>
+                <th scope="row" style="padding-left: 4.5%; padding-right: 0%;">{{milaDay_objects.8.Mon}}</th>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.8.Tue}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.8.Wed}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.8.Thu}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.8.Fri}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.8.Sat}}</td>
+                <td style="padding-left: 4.5%;">{{milaDay_objects.8.Sun}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="pass">
+        <h3>Aaj Kya Pass Hua</h3>
+    </div>
+    <div class="test">
+        Test..
+        <hr>
+    </div>
+
+    <div class="empty">
+    </div>
+
+    <div class="saatasite">
+        <button class="refrash"><a href="/" class="rehref" id="bottombutton"> SattaMatkaa.Site </a></button>
+    </div>
+
+    <footer>
+        <div class="footer text-center">
+            <button type="button" class="btn btn-danger button">Back</button>
+            <a href="/"> <button type="button" class="btn btn-danger button">Home</button> <br></a>
+            <p class="blackbold my-3"><a href="/" style="padding-right: 4px;">Domain</a>ALL RIGHTS RESERVED.</p>
+            <p style="margin-top: -15px;" class="blackbold">(2019-2020)</p>
+            <p style="margin-top: -15px;" class="blackbold">*****</p>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

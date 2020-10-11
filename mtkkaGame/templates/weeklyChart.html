@@ -1,0 +1,543 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/stlye.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital@1&display=swap" rel="stylesheet">
+
+    <title>Weekly Chart </title>
+    <style>
+        .namehref {
+            text-decoration: none ! important;
+        }
+
+        .Weeklyback {
+            width: 100%;
+            height: 18%;
+            background-color: rgb(162, 76, 46);
+            border-radius: 5px;
+            border: 1px solid rgb(231, 146, 13);
+            font-size: 17px;
+            color: white;
+            padding: 10px;
+        }
+
+        .mainchart {
+            width: 100%;
+            height: 228vh;
+            border: 1px solid rgb(231, 146, 13);
+            border-radius: 5px;
+            margin-top: 8px;
+        }
+
+        .second {
+            width: 100%;
+            height: 4%;
+            background-color: rgb(220, 175, 66);
+            padding-top: 15px;
+            text-align: center;
+            border: 1px solid rgb(231, 146, 13);
+
+        }
+
+        .weekchart {
+            font-weight: bold;
+            font-style: italic;
+            font-size: 1.5em;
+            color: #000;
+        }
+
+        .numberpara {
+            text-align: center;
+            margin-top: 3%;
+            margin-bottom: 5%;
+            font-weight: bold;
+            font-size: 1.4em;
+            color: #000;
+
+        }
+
+        .numberpara2 {
+            margin-bottom: 0.1rem;
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #000;
+
+        }
+
+        .mainjodichart {
+            width: 100%;
+            height: 4%;
+            background-color: rgb(31, 79, 99);
+            margin-top: 65px;
+        }
+
+        .jodicharthr {
+            text-align: center;
+            font-style: italic;
+            color: rgb(204, 255, 0);
+            padding: 17px;
+            font-weight: bold;
+        }
+
+        .gamenumber {
+            margin-top: 6%;
+            margin-bottom: 6%;
+
+        }
+
+        .day {
+            background-color: rgb(31, 79, 99);
+
+        }
+
+        .daytime {
+            margin-top: 5%;
+        }
+
+        .pass {
+            width: 100%;
+            height: 12vh;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            background-color: rgb(31, 79, 99);
+            color: rgb(204, 255, 0);
+            padding: 25px;
+            font-style: italic;
+        }
+        .test {
+            text-align: center;
+            margin-top: 3%;
+            margin-bottom: 1%;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: brown;
+            background-color: whitesmoke;
+        }
+        .empty {
+            width: 100%;
+            height: 10vh;
+            background-color: #3b5057;
+            border-top: 5px solid rgb(0, 0, 0);
+            margin-bottom: 2%;
+        }
+        .saatasite {
+            width: 100%;
+            height: 12vh;
+            background-color: black;
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 8px;
+            margin-bottom: 7px;
+        }
+
+        .refrash {
+            background: linear-gradient(to right, #02dc61, #3c67b8) !important;
+            color: white;
+            border: solid 1px #000;
+            font-size: 1.4em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none ! important;
+           
+        }
+        .rehref {
+            color: white !important;
+            font-weight: bold;
+            text-decoration: none !important;
+            background-color: unset !important;
+        }
+
+        .footer {
+            width: 100%;
+            height: 28vh;
+            background-color: #8ff3ce;
+
+        }
+
+        .button {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            width: 85px;
+            height: 55px;
+            border-radius: 5px;
+            margin-top: 2%;
+            margin-left: 35px;
+
+        }
+        .blackbold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <a href="/" class="namehref">
+            <h1 class="textColor my-3">SattaMatkaa.Site</h1>
+        </a>
+    </center>
+
+    <div class="container-flude Weeklyback">
+
+      <center><p>Weekly Chart, Weekly Chart Satta, Weekly Chart 2018, Weekly Chart VS Daily Chart, Weekly Chart Gali, Weekly
+            Chart Satta King, Weekly Chart Open, Weekly Chart Main Mumbai, Weekly Jodi, Weekly Free Guessing, Mumbai
+            Weekly Chart, Weekly Best Jodi, Satta Weekly Jodi Panna, Kalyan Weekly Jodi, Mumbai Weekly Jodi, Mumbai
+            Weekly Open
+        </p>
+    </center>  
+    </div>
+    <div class="live my-2">
+
+        <h4 class="livegame"><span class="cercal spinner-grow">*</span> LIVE - RESULT - ZONE <span
+                class="cercal spinner-grow">*</span></h4>
+
+        <div class="firstName">
+            <h4>Jay bharat</h4>
+            <h5>{{all_objects.0.Jay_bharat}}</h5>
+        </div>
+        <hr class="gamehr">
+        <div class="firstName">
+            <h4>Moon night</h4>
+            <h5>{{all_objects.0.Moon_night}}</h5>
+        </div>
+
+        <hr class="gamehr">
+        <div class="firstName">
+            <h4>Great India</h4>
+            <h5>{{all_objects.0.Great_India}}</h5>
+        </div>
+        <hr class="gamehr">
+        <div class="firstName">
+            <h4>Kalyan day</h4>
+            <h5>{{all_objects.0.Kalyan_day}}</h5>
+        </div>
+        <!-- <hr class="gamehr">
+        <div class="firstName">
+            <h4>Kalyan night</h4>
+            <h5>Loading....</h5>
+        </div>
+        <hr class="gamehr">
+        <div class="firstName">
+            <h4>Rajdhani night</h4>
+            <h5>Loading....</h5>
+        </div>
+        <hr class="gamehr">
+        <div class="firstName">
+            <h4>Rajdhani day</h4>
+            <h5>Loading....</h5>
+        </div>
+        <hr class="gamehr">
+        <div class="firstName">
+            <h4>Milan day</h4>
+            <h5>Loading....</h5>
+        </div>
+        <hr class="gamehr">
+        <div class="firstName">
+            <h4>Milan night</h4>
+            <h5>Loading....</h5>
+        </div>
+        <hr class="gamehr">
+        <div class="firstName">
+            <h4>Main ratan</h4>
+            <h5>Loading....</h5>
+        </div> -->
+    </div>
+
+
+    <div class="container-flude mainchart">
+        <div class="second">
+            <h5 class="weekchart">Satta Matka Weekly Chart</h5>
+        </div>
+        <p class="numberpara">10-02-2020 to 16 -02-2020</p>
+        <p class="text-center numberpara2">1 => 137 245 344 128 380</p>
+        <p class="text-center numberpara2">2 => 345 480 129 570 660</p>
+        <p class="text-center numberpara2">3 => 355 490 580 120 779</p>
+        <p class="text-center numberpara2">4 => 130 590 789 220 239</p>
+        <p class="text-center numberpara2">5 => 168 249 348 780 366</p>
+        <p class="text-center numberpara2">6 => 169 268 457 790 240</p>
+        <p class="text-center numberpara2">7 => 124 250 359 458 890</p>
+        <p class="text-center numberpara2">8 => 260 369 440 567 990</p>
+        <p class="text-center numberpara2">9 => 234 450 568 289 126</p>
+        <p class="text-center numberpara2">0 => 460 578 145 235 127</p>
+
+        <div class="mainjodichart">
+            <h3 class="jodicharthr">WEEKLY JODIES CHART</h3>
+            <div class="gamenumber">
+                <p class="text-center numberpara2">2= | 24 | 20 | 26 | 29 |</p>
+                <p class="text-center numberpara2">3= | 36 | 33 | 31 | 38 |</p>
+                <p class="text-center numberpara2">9= | 93 | 99 | 98 | 91 |</p>
+                <p class="text-center numberpara2">5= | 51 | 54 | 55 | 58 |</p>
+                <p class="text-center numberpara2">8= | 81 | 83 | 84 | 86 |</p>
+                <p class="text-center numberpara2">0= | 01 | 05 | 08 | 09 |</p>
+
+            </div>
+            <div class="day">
+                <h3 class="jodicharthr">DATE FIX WEEKLY OPEN TO CLOSE GAME</h3>
+            </div>
+            <div class="daytime">
+                <p class="text-center numberpara2">MONDAY = {2-7-3-8}</p>
+                <p class="text-center numberpara2">TUESDAY = {4-9-3-8}</p>
+                <p class="text-center numberpara2">WEDNESDAY = {5-0-4-9}</p>
+                <p class="text-center numberpara2">THURSDAY = {3-8-4-9}</p>
+                <p class="text-center numberpara2">FRIDAY = {5-0-1-6}</p>
+                <p class="text-center numberpara2">SATURDAY = {4-9-5-0}</p>
+                <p class="text-center numberpara2">SUNDAY = {2-7-1-6}</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="word my-2">
+        WORLD'S SATTA MATKA RESULTS
+    </div>
+
+    <div class="bharat">
+        <h5 class="bharatHr">MAIN BHARATH</h5>
+        <p class="numberbharat">120-35-140 <br> (12:30 pm to 01:30 pm )</p>
+    </div>
+
+    <div class="jaybharat">
+        <center>
+            <h5 class="bharatHr">Jay bharat</h5>
+        </center>
+        <p style="color: #621ba4;color: #621ba4;
+        font-size: .5em;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;">(11:30 am to 12:30 pm )</p>
+        <hr class="gamehr">
+    </div>
+
+    <div class="jaybharat">
+        <center>
+            <h5 class="bharatHr">Moon night</h5>
+        </center>
+        <p style="font-size: 1.5em;
+       font-weight: bold;
+       font-style: italic;
+       color: #ff0019;
+       text-shadow: 1px 2px 1px rgba(0,0,0,.075);
+       margin: 0;
+       text-transform: uppercase;
+       text-align: center;">123-45-678</p>
+        <p style="color: #621ba4;color: #621ba4;
+      font-size: .5em;
+      text-align: center;
+      font-size: 1em;
+      font-weight: bold;">(01:10 pm to 02:09 pm )</p>
+        <hr class="gamehr">
+    </div>
+
+    <div class="jaybharat">
+        <center>
+            <h5 class="bharatHr">Great India</h5>
+        </center>
+        <p style="font-size: 1.5em;
+       font-weight: bold;
+       font-style: italic;
+       color: #ff0019;
+       text-shadow: 1px 2px 1px rgba(0,0,0,.075);
+       margin: 0;
+       text-transform: uppercase;
+       text-align: center;">279-86-448</p>
+        <p style="color: #621ba4;color: #621ba4;
+        font-size: .5em;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;">(03:15 pm to 05:15 pm )</p>
+        <hr class="gamehr">
+    </div>
+
+    <div class="jaybharat">
+        <center>
+            <h5 class="bharatHr">Kalyan day</h5>
+        </center>
+        <p style="font-size: 1.5em;
+       font-weight: bold;
+       font-style: italic;
+       color: #ff0019;
+       text-shadow: 1px 2px 1px rgba(0,0,0,.075);
+       margin: 0;
+       text-transform: uppercase;
+       text-align: center;">467-74-167</p>
+        <p style="color: #621ba4;color: #621ba4;
+        font-size: .5em;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;">(03:30 pm to 05:30 pm )</p>
+        <hr class="gamehr">
+    </div>
+
+    <div class="jaybharat">
+        <center>
+            <h5 class="bharatHr">Kalyan night</h5>
+        </center>
+        <p style="font-size: 1.5em;
+       font-weight: bold;
+       font-style: italic;
+       color: #ff0019;
+       text-shadow: 1px 2px 1px rgba(0,0,0,.075);
+       margin: 0;
+       text-transform: uppercase;
+       text-align: center;">399-17-890</p>
+        <p style="color: #621ba4;color: #621ba4;
+        font-size: .5em;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;">(09:10 pm to 11:10 pm )</p>
+        <hr class="gamehr">
+    </div>
+
+    <div class="jaybharat">
+        <center>
+            <h5 class="bharatHr">Rajdhani night</h5>
+        </center>
+        <p style="font-size: 1.5em;
+       font-weight: bold;
+       font-style: italic;
+       color: #ff0019;
+       text-shadow: 1px 2px 1px rgba(0,0,0,.075);
+       margin: 0;
+       text-transform: uppercase;
+       text-align: center;">111-111-111</p>
+        <p style="color: #621ba4;color: #621ba4;
+        font-size: .5em;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;">(09:30 pm to 11:45 pm )</p>
+        <hr class="gamehr">
+    </div>
+
+    <div class="jaybharat">
+        <center>
+            <h5 class="bharatHr">Rajdhani day</h5>
+        </center>
+        <p style="font-size: 1.5em;
+       font-weight: bold;
+       font-style: italic;
+       color: #ff0019;
+       text-shadow: 1px 2px 1px rgba(0,0,0,.075);
+       margin: 0;
+       text-transform: uppercase;
+       text-align: center;">690-52-237</p>
+        <p style="color: #621ba4;color: #621ba4;
+        font-size: .5em;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;">(04:16 am to 04:18 am )</p>
+        <hr class="gamehr">
+    </div>
+
+    <div class="jaybharat">
+        <center>
+            <h5 class="bharatHr">Milan day</h5>
+        </center>
+        <p style="font-size: 1.5em;
+       font-weight: bold;
+       font-style: italic;
+       color: #ff0019;
+       text-shadow: 1px 2px 1px rgba(0,0,0,.075);
+       margin: 0;
+       text-transform: uppercase;
+       text-align: center;">333-52-123</p>
+        <p style="color: #621ba4;color: #621ba4;
+        font-size: .5em;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;">(01:00 pm to 11:00 pm )</p>
+        <hr class="gamehr">
+    </div>
+
+    <div class="jaybharat">
+        <center>
+            <h5 class="bharatHr">Milan night</h5>
+        </center>
+        <p style="font-size: 1.5em;
+      font-weight: bold;
+      font-style: italic;
+      color: #ff0019;
+      text-shadow: 1px 2px 1px rgba(0,0,0,.075);
+      margin: 0;
+      text-transform: uppercase;
+      text-align: center;">230-57-160</p>
+        <p style="color: #621ba4;color: #621ba4;
+        font-size: .5em;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;">(04:00 pm to 06:00 pm )</p>
+        <hr class="gamehr">
+    </div>
+
+    <div class="jaybharat">
+        <center>
+            <h5 class="bharatHr">Jay bharat</h5>
+        </center>
+        <p style="font-size: 1.5em;
+       font-weight: bold;
+       font-style: italic;
+       color: #ff0019;
+       text-shadow: 1px 2px 1px rgba(0,0,0,.075);
+       margin: 0;
+       text-transform: uppercase;
+       text-align: center;">123-56-268</p>
+        <p style="color: #621ba4;color: #621ba4;
+        font-size: .5em;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;">(01:15 pm to 02:15 pm )</p>
+        <hr class="gamehr">
+    </div>
+    <div class="pass">
+        <h3>Aaj Kya Pass Hua</h3>
+    </div>
+
+    <div class="test">
+        Test..
+        <hr>
+    </div>
+
+    <div class="empty">
+    </div>
+
+    <div class="saatasite">
+        <button class="refrash"><a href="/" class="rehref"> SattaMatkaa.Site </a></button>
+    </div>
+
+    <footer>
+        <div class="footer text-center">
+            <button type="button" class="btn btn-danger button">Back</button>
+           <a href="/"><button type="button" class="btn btn-danger button">Home</button> <br></a> 
+            <p class="blackbold my-3"><a href="/" style="padding-right: 4px;">Domain</a>ALL RIGHTS RESERVED.</p>
+            <p style="margin-top: -15px;" class="blackbold">(2019-2020)</p>
+            <p style="margin-top: -15px;" class="blackbold">*****</p>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

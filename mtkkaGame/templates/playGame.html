@@ -1,0 +1,227 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/stlye.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital@1&display=swap" rel="stylesheet">
+    <style>
+        .link {
+            padding-top: 15px;
+            background: #117a8b;
+            color: white !important;
+            box-shadow: 2px 2px #360813;
+            font-size: medium;
+            margin: 10px 2px;
+            padding: 8px 5px;
+            display: block;
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: capitalize;
+            margin: 0px 20px;
+            font-style: italic;
+            font-size: 18px;
+            letter-spacing: .5px;
+            text-decoration: none !important;
+            text-align: center;
+            color: -webkit-link;
+
+        }
+
+   
+    </style>
+
+    <title>Play Game Now!</title>
+</head>
+
+<body>
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+        <strong>{{ message }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Jay Bharat</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+            {% if user.is_authenticated %}
+                <li class="nav-item active">
+                    <a class="nav-link">Points ({{request.user.first_name}})</a><span class="sr-only">(current)</span></a>
+                </li>
+                {% endif %}
+                {% if user.is_authenticated %}
+                <li class="nav-item active">
+                    <a class="nav-link">Log In as - ({{request.user}})</a>
+                </li>
+                {% endif %}
+                <!-- Vertically centered modal -->
+
+                <!-- Log In Modal Started Here  -->
+
+                <!-- Button trigger modal -->
+
+                {% if user.is_authenticated %}
+             <a href="logout">  <button type="button" class="btn btn-outline-primary mx-2" data-toggle="modal"
+                data-target="#exampleModal">
+                Logout
+            </button>
+        </a> 
+        {% endif %}
+
+                <button type="button" class="btn btn-outline-primary mx-2" data-toggle="modal"
+                    data-target="#exampleModal">
+                    Login
+                </button>
+                
+            
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Login Now!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form method="POST" action="login">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="loginusername">User Name</label>
+                                        <input type="text" class="form-control" id="loginusername"
+                                            placeholder="Enter Your username" required name="loginusername">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="name@example.com" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="loginpassword">Password</label>
+                                        <input type="password" class="form-control" id="loginpassword"
+                                            placeholder="Enter Your password" required name="loginpassword">
+                                    </div>
+                                    <button type="submit" class="btn btn-outline-primary">Submit</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- signup modal started here  -->
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-primary mx-2" data-toggle="modal"
+                    data-target="#staticBackdrop">
+                    Sign Up
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">SignUp Now!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="Signup" method="POST">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="name">User Name</label>
+                                        <input type="text" class="form-control" id="name" name="username"
+                                            placeholder="Enter Your Name Here!" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="name@example.com" required name="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone"> Phone Number </label>
+                                        <input type="phone" class="form-control" id="phone" name="phone"
+                                            placeholder="Enter Your Phone Number Here!" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pass1">Password</label>
+                                        <input type="password" class="form-control" id="pass1" name="pass1"
+                                            placeholder="Enter Your Password Here!" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pass2">Conform Password</label>
+                                        <input type="password" class="form-control" id="pass2" name="pass2"
+                                            placeholder="Enter Your Conform Password Here!" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-outline-primary">Submit</button>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-secondary"
+                                    data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+
+    </nav>
+
+
+
+    <div class="container my-4">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h6 class="display-4 text-center">Login, Signup and Call Now For Play Game and Earn Mony Now!</h6>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <a href="tel: 6374198325" class="link"> Call Now</a>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

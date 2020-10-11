@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Merriweather Sans', sans-serif;
+
+}
+
+.textColor{
+    font-size: 36px;
+    font-weight: bold;
+    color:  rgb(49, 49, 221);
+    text-decoration: none;
+    background-color: transparent;
+   
+   
+}
+
+#homeContent{
+    background-color: rgb(218, 239, 248);
+    height: 10%;
+    width: 100%;
+}
+
+#firstpara{
+    color: red;
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.live{
+    width: 100%;
+    height: vh;
+    border: solid black;
+   
+}
+
+.livegame{
+    background-color: #485999;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid black;
+}
+
+
+.firstName{
+    text-align: center;
+    color: red;
+    padding-top: 2px;
+    padding-bottom: 2px;
+   
+}
+
+.gamehr{
+    background-color: black;
+}
+
+.number{
+    text-align: center;
+    background-color:#3b6f74!important;
+    color: white;
+    height: 8vh;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    border: 2px solid #04fdb8!important;  
+}
+
+.moveText{
+    background-color: darkorange;
+}
+
+.movepara{
+    color: white;
+    margin-top: 5px;
+    padding-top: 9px;
+    font-size: 22px;
+    height: 6vh;
+}
+
+.word{
+    text-align: center;
+    color: #117a8b;
+    text-shadow: 1px 1px #000;
+    padding: 10px 5px;
+    font-size: 1.4em;
+    font-weight: bold;
+    border: solid #2a17f2;
+}
+
+.bharat{
+    text-align: center;
+    background-color: #feb41d;
+    height: 19vh;
+    border-bottom: solid black;
+
+}
+
+.bharatHr{
+    color: #100984;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 15px;
+    
+}
+
+
+.numberbharat{
+    font-size: 1.5em;
+    font-weight: bold;
+    font-style: italic;
+    color: red;
+    text-shadow: 1px 2px 1px #e2e92f;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.img1{
+    width: 33px;
+    height: 25px;
+    border-radius: 9px;
+
+}
+
+
